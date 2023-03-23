@@ -5,20 +5,23 @@ type MainButtonProps = {
     type?: "button" | "submit";
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     children: ReactNode;
-    // color?: string;
+    color?: string;
+    txtColor?: string;
 };
 
 function MainButton({
-    type = "submit",
+    type = "button",
     handleClick = () => console.log("Button clicked"),
     children,
+    color = "var(--primary)",
+    txtColor = "var(--tertiary)",
 }: // color = "var(--primary)",
 MainButtonProps) {
     return (
         <button
             onClick={handleClick}
             className={styles.mainButton}
-            // style={{ backgroundColor: color }}
+            style={{ backgroundColor: color, color: txtColor }}
             type={type}
         >
             {children}
