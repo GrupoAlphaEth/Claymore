@@ -237,3 +237,46 @@
   align-items: center;
   font-weight: bold;
 }
+
+.quote{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 1em;
+  background-color: var(--tertiary);
+  color: var(--tertiary);
+}
+
+.quote_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+  text-align: center;
+  gap: 1em;
+  height: 20em;
+  width: 80%;
+  background-color: var(--secondary);
+}
+
+.white_line{
+  height: 2px;
+  width: 4em;
+  background-color: var(--tertiary);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 3em; /* adjust as needed */
+}
+
+.quote button:hover{
+  border: 1px var(--tertiary) solid ;
+  background-color: var(--secondary) !important;
+  color: var(--tertiary) !important;
+}
+
+.quote button{
+  border: 1px var(--tertiary) solid ;
+}

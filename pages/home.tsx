@@ -165,6 +165,20 @@ function Home() {
             />
           </div>
         </div>
+
+        <div className={styles.quote}>
+          <div className={styles.quote_card}>
+            <h2>
+              We're the marketplace that's so safe, it's practically like
+              shopping in a panic room!
+            </h2>
+            <p className={styles.white_line}></p>
+
+            <MainButton txtColor="var(--secondary)" color="var(--tertiary)">
+              Sign Up
+            </MainButton>
+          </div>
+        </div>
       </div>
     </>
   );
