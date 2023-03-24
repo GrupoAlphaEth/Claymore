@@ -6,12 +6,12 @@ import Image from "next/image";
 type CardProps = {
   imgSrc?: string;
   imgAlt?: string;
-  tittle: string;
-  description: string;
-  price: number;
-  currency: string;
-  rating: number;
-  button: string;
+  tittle?: string;
+  description?: string;
+  price?: number;
+  currency?: string;
+  rating?: number;
+  button?: string;
 };
 
 function Card({
