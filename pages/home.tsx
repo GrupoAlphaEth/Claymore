@@ -3,6 +3,8 @@ import Header from "@/components/layout/header";
 import Tip from "@/components/layout/tip";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
+import { RemoveMediaImage } from "iconoir-react";
+import Card from "@/components/card/card";
 
 function Home() {
   return (
@@ -51,10 +53,12 @@ function Home() {
         </p>
 
         <div className={styles.card_container}>
-          <div className={styles.card}>Reemplazar</div>
-          <div className={styles.card}>Reemplazar</div>
-          <div className={styles.card}>Reemplazar</div>
-          <div className={styles.card}>Reemplazar</div>
+          
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+
         </div>
       </div>
 
