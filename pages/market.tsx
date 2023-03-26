@@ -10,19 +10,26 @@ import TittleHeader from "@/components/layout/tittle_header";
 const cards = Array(50).fill(0);
 
 function Market() {
-  return (
-    <>
-      <Header />
+    return (
+        <>
+            <Header />
 
-      <TittleHeader tittle="Marketplace"/>
+            <TittleHeader tittle="Marketplace" />
 
-      <div className={styles.product_container}>
-        {cards.map((card, index) => {
-          return <Card key={index} />;
-        })}
-      </div>
-    </>
-  );
+            <div className={styles.product_container}>
+                {cards.map((card, index) => {
+                    return (
+                        <Card
+                            key={index}
+                            tittle="PS5"
+                            price={0.0009}
+                            description={"des"}
+                        />
+                    );
+                })}
+            </div>
+        </>
+    );
 }
 
 export default Market;

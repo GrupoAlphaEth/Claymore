@@ -2,6 +2,10 @@
 import MainButton from "@/components/buttons/MainButton";
 import styles from "@/styles/components/forms/forms.module.css";
 import { useForm } from "react-hook-form";
+import marketplace from "@/ethereum-hardhat/artifacts/src/ethereum-hardhat/contracts/Marketplace.sol/Marketplace.json";
+import { useEffect } from "react";
+// import { useDocument, usePolybase } from "@polybase/react";
+const { v4: uuidv4 } = require("uuid");
 
 function ProductForm() {
     const {
@@ -10,7 +14,46 @@ function ProductForm() {
         formState: { errors },
     } = useForm();
 
-    function onSubmit(data: any) {
+    let contract: any = undefined;
+
+    function web() {
+        //@ts-ignore
+        const web3 = window.web3;
+        contract = new web3.eth.Contract(
+            marketplace.abi,
+            "0xB9e078C2C9C192cd2c5241c5E75F2c65cc81BBf6"
+        );
+    }
+    //@ts-ignore
+
+    useEffect(() => {
+        web();
+    }, []);
+
+    async function onSubmit(data: any) {
+        // polybase
+        //     .collection("Product")
+        //     .create([
+        //         uuidv4(),
+        //         data.title,
+        //         data.country,
+        //         data.genre,
+        //         +data.quantity,
+        //         +data.price,
+        //         data.description,
+        //         data.company,
+        //     ]);
+        contract.methods
+            .addProduct(uuidv4(), data.title, data.price * 10 ** 18, [
+                data.code,
+            ])
+            .send(
+                //@ts-ignore
+                { from: "0x639b2623C8570ea91163F1d2C734FFe03ABa24Ce" }
+            )
+            .then(() => alert("Product added"));
+
+        // alert("Product added");
         console.log(data);
     }
 
@@ -70,6 +113,21 @@ function ProductForm() {
                         {errors?.quantity && (
                             <p>{`${errors.quantity.message}`}</p>
                         )}
+                    </div>
+
+                    <div className={styles.input}>
+                        <label htmlFor="quantity">Code</label>
+                        <input
+                            placeholder="01wkdsmkamsd"
+                            type="text"
+                            id="code"
+                            // required
+                            {...register("code", {
+                                required: "The field is required",
+                            })}
+                        />
+
+                        {errors?.code && <p>{`${errors.code.message}`}</p>}
                     </div>
 
                     <div className={styles.input}>

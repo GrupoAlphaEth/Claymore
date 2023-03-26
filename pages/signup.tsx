@@ -7,6 +7,7 @@ import Metamask from "../components/icons/metamask";
 import TittleHeader from "@/components/layout/tittle_header";
 import Link from "next/link";
 import SignUpForm from "@/components/forms/signup/form";
+import { connectWallet, initialize } from "@/ethereum/web3";
 
 function signup() {
     return (
@@ -25,15 +26,17 @@ function signup() {
                         /> */}
                         <Metamask />
                         <div className={styles.loginButtons}>
-                            <Link
-                                href={"/market"}
-                                className={styles.buttonLink}
+                            <MainButton
+                                handleClick={() => {
+                                    initialize();
+                                    connectWallet();
+                                }}
+                                type="button"
                             >
-                                <MainButton type="button">
-                                    <Metamask />
-                                    Sign up with Metamask
-                                </MainButton>
-                            </Link>
+                                <Metamask />
+                                Sign up with Metamask
+                            </MainButton>
+
                             <SignUpForm />
                             {/* <MainButton type="button">
                                 Sign in with Email
