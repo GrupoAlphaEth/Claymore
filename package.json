@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "optimism-goerli-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/marketplace-script.js --network optimism_goerli",
+    "mumbai-hardhat": "npx hardhat run src/ethereum-hardhat/scripts/marketplace-script.js --network mumbai"
   },
   "dependencies": {
     "@polybase/client": "^0.3.38",
@@ -22,7 +24,16 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.8",
     "react-useanimations": "^2.10.0",
-    "truffle": "^5.8.1",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+
+    "web3": "1.9.0",
+    "web3-utils": "1.9.0",
+    "truffle-hdwallet-provider": "1.0.17"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.6",
+    "@nomiclabs/hardhat-waffle": "2.0.3",
+    "ethereum-waffle": "3.4.4",
+    "hardhat": "2.9.9"
   }
 }
