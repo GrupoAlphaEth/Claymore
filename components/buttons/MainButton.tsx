@@ -13,17 +13,10 @@ function MainButton({
     type = "button",
     handleClick = () => console.log("Button clicked"),
     children,
-    color = "var(--primary)",
-    txtColor = "var(--tertiary)",
 }: // color = "var(--primary)",
 MainButtonProps) {
     return (
-        <button
-            onClick={handleClick}
-            className={styles.mainButton}
-            style={{ backgroundColor: color, color: txtColor }}
-            type={type}
-        >
+        <button onClick={handleClick} type={type} className={styles.mainButton}>
             {children}
         </button>
     );

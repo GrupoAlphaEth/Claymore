@@ -3,11 +3,12 @@
     padding: 1rem;
     font-family: inherit;
     border: none;
+    color: whitesmoke;
 }
 
 .mainButton:hover {
     background-color: var(--secondary);
-    color: whitesmoke;
+
     outline: none;
 }
 
