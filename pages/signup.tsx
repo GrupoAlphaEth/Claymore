@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Metamask from "../components/icons/metamask";
 import TittleHeader from "@/components/layout/tittle_header";
 import Link from "next/link";
+import SignUpForm from "@/components/forms/signup/form";
 
 function signup() {
     return (
@@ -33,6 +34,7 @@ function signup() {
                                     Sign up with Metamask
                                 </MainButton>
                             </Link>
+                            <SignUpForm />
                             {/* <MainButton type="button">
                                 Sign in with Email
                             </MainButton> */}
