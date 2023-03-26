@@ -7,15 +7,15 @@ import Metamask from "../components/icons/metamask";
 import TittleHeader from "@/components/layout/tittle_header";
 import Link from "next/link";
 
-function signin() {
+function signup() {
     return (
         <div className={styles.loginPage}>
             <Header />
             <div className={styles.container}>
-                <TittleHeader tittle="Sign In" />
+                <TittleHeader tittle="Sign Up" />
                 <div className={styles.login}>
                     <div className={styles.image}>
-                        <Img src="/images/signin.png" alt="Sign in Image" />
+                        <Img src="/images/signup.png" alt="Sign Up Image" />
                     </div>
                     <div className={styles.loginImage}>
                         {/* <Img
@@ -30,7 +30,7 @@ function signin() {
                             >
                                 <MainButton type="button">
                                     <Metamask />
-                                    Sign in with Metamask
+                                    Sign up with Metamask
                                 </MainButton>
                             </Link>
                             {/* <MainButton type="button">
@@ -45,4 +45,4 @@ function signin() {
     );
 }
 
-export default signin;
+export default signup;

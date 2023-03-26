@@ -9,7 +9,7 @@ type ImgProps = {
 function Img({ src, alt }: ImgProps) {
     return (
         <div className={styles.image}>
-            <Image fill src={src} alt={alt} />
+            <Image style={{ objectFit: "cover" }} fill src={src} alt={alt} />
         </div>
     );
 }

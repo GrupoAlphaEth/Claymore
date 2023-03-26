@@ -5,6 +5,9 @@
     border: none;
     color: whitesmoke;
     border-radius: 5px;
+    display: flex;
+    place-items: center;
+    gap: 0.5rem;
 }
 
 .mainButton:hover {
@@ -15,11 +18,6 @@
 
 .mainButton:focus {
     outline: 1px solid whitesmoke;
-}
-
-.mainButton a {
-    color: var(--tertiary);
-    text-decoration: none;
 }
 
 .image {

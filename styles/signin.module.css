@@ -7,6 +7,10 @@
     min-height: 80svh;
 }
 
+.buttonLink {
+    text-decoration: none;
+}
+
 /* .container h1 {
     color: var(--tertiary);
     text-decoration: underline;
@@ -36,6 +40,11 @@
     display: grid;
     place-content: center;
     gap: 1rem;
+}
+
+.loginButtons svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 .imageContainer {
