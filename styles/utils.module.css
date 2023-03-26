@@ -4,16 +4,22 @@
     font-family: inherit;
     border: none;
     color: whitesmoke;
+    border-radius: 5px;
 }
 
 .mainButton:hover {
     background-color: var(--secondary);
-
+    cursor: pointer;
     outline: none;
 }
 
 .mainButton:focus {
     outline: 1px solid whitesmoke;
+}
+
+.mainButton a {
+    color: var(--tertiary);
+    text-decoration: none;
 }
 
 .image {

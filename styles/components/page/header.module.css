@@ -33,14 +33,18 @@
 }
 
 .navbar_links li a {
+    display: flex;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     color: var(--tertiary);
     padding: 0.5rem;
-    display: block;
+    /* display: block; */
 }
 
 .navbar_links li:hover {
     background-color: var(--secondary);
+    border-radius: 5px;
 }
 
 .navbar_links li:hover a {

@@ -1,10 +1,11 @@
-import styles from "@/styles/login.module.css";
+import styles from "@/styles/signin.module.css";
 import MainButton from "@/components/buttons/MainButton";
 import Img from "@/components/images/Img";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/Footer";
 import Metamask from "../components/icons/metamask";
 import TittleHeader from "@/components/layout/tittle_header";
+import Link from "next/link";
 
 function login() {
     return (
@@ -23,12 +24,14 @@ function login() {
                         /> */}
                         <Metamask />
                         <div className={styles.loginButtons}>
-                            <MainButton type="button">
-                                Sign in with Metamask
-                            </MainButton>
-                            <MainButton type="button">
+                            <Link href={"/market"}>
+                                <MainButton type="button">
+                                    Sign in with Metamask
+                                </MainButton>
+                            </Link>
+                            {/* <MainButton type="button">
                                 Sign in with Email
-                            </MainButton>
+                            </MainButton> */}
                         </div>
                     </div>
                 </div>
